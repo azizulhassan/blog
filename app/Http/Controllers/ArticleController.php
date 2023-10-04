@@ -14,8 +14,8 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::latest()->get();
-        
-        return Inertia::render('', ['articles' => $articles]);
+        // dd($articles);
+        return Inertia::render('Article/Index', ['articles' => $articles]);
     }
 
     /**
